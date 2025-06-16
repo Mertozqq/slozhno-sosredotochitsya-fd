@@ -362,7 +362,7 @@
 @media (width >= 1024px) {
     .rec__container {
     top: 20px;
-    right: 45px;
+    right: 25px;
   }
   .grid__container {
     display: grid;
@@ -391,12 +391,12 @@
   }
   .header__text {
     margin-top: 60px;
-    margin-right: 20px;
     grid-column: 3;
     grid-row: 3;
     min-inline-size: 490px;
   }
   .main {
+    padding-right: 0;
     gap: 40px;
   }
   .theory {
@@ -440,7 +440,7 @@
   }
   .decorated-zone::before {
     top: 20px;
-    right: 40px;
+    right: 20px;
   }
   .decorated-zone::after {
     bottom: 20px;
