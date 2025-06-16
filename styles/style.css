@@ -3,14 +3,15 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-attachment: fixed;
+  
   background-color: var(--main__background__color);
-  background-image: var(--cover__background__image);
+  
   background-position: center;
   background-size: cover;
 }
 
 .header {
-  
+  background-image: var(--cover__background__image);
   background-position: center;
   background-size: cover;
   padding: 10px;
@@ -146,7 +147,6 @@
 }
 .main {
   padding: 40px 10px;
-  background-color: var(--main__background__color);
   display: grid;
   gap: 30px;
 }
@@ -204,7 +204,7 @@
 }
 
 .footer {
-  background-color: var(--main__background__color);
+
   display: grid;
   align-items: center;
   min-height: 100vh;
