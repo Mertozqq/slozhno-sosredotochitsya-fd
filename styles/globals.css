@@ -20,6 +20,8 @@ h5,
 h6,
 p {
   margin: 0;
+  
+  font-family: var(--dark__theme__font__family);
 }
 
 ul {
