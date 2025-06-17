@@ -7,19 +7,20 @@
 :root.theme-light {
   --cover__background__image: url(../images/cover-image-light.png);
 
-  --dark__blue: #353430;
-  --light__pink: #f1b2ce;
   --light__red: #ff8dcb;
   --header__font__color: #ffc2e6;
-  --button__color: #353430;
-  --button__color__hover: #32312D66;
-  --title__decor: #353430;
-  --main__title__of__blocks: #353430;
-  --main__paragraph: #353430;
+  --dark__blue: #353430;
+  --light__pink: #f1b2ce;
   --main__background__color: #fff1f7;
 
   --header__text__shadow: 4px 4px 0 #ff0070;
   --footer__text__shadow: 2px 2px 0 #ff0070;
+
+  --button__color: #353430;
+  --button__color__hover: #32312d66;
+  --title__decor: #353430;
+  --main__title__of__blocks: #353430;
+  --main__paragraph: #353430;
 
   --font__family: "IBM Plex mono", monospace;
   --default__font__weight: 400;
@@ -34,26 +35,24 @@
   --rec__display: none;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --cover__background__image: url(../images/cover-image-light.png);
 
-    --dark__blue: #353430;
-    --light__pink: #f1b2ce;
     --light__red: #ff8dcb;
     --header__font__color: #ffc2e6;
+    --dark__blue: #353430;
+    --light__pink: #f1b2ce;
+    --main__background__color: #fff1f7;
+
+    --header__text__shadow: 4px 4px 0 #ff0070;
+    --footer__text__shadow: 2px 2px 0 #ff0070;
+
     --button__color: #353430;
+    --button__color__hover: #32312d66;
     --title__decor: #353430;
     --main__title__of__blocks: #353430;
     --main__paragraph: #353430;
-    --main__background__color: #fff1f7;
-
-    --header__text__shadow: 4px 4px 0 #FF8DCB;
-    --footer__text__shadow: 2px 2px 0 #FF8DCB;
 
     --font__family: "IBM Plex mono", monospace;
     --default__font__weight: 400;

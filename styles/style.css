@@ -2,21 +2,15 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-attachment: fixed;
-  
-  background-color: var(--main__background__color);
-  
-  background-position: center;
+  background-image: var(--cover__background__image);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
-  background-image: var(--cover__background__image);
-  background-position: center;
-  background-size: cover;
   padding: 10px;
-  min-block-size: 100vh;
-  max-block-size: 100.1vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .rec__container {
@@ -55,12 +49,12 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-
+  top: 10px;
   right: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--light__red);
-  border-right: 1px solid var(--light__red);
+  border-top: 1px solid var(--main__title__of__blocks);
+  border-right: 1px solid var(--main__title__of__blocks);
 }
 
 /* Левый нижний уголок */
@@ -71,8 +65,8 @@
   left: 10px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--light__red);
-  border-left: 1px solid var(--light__red);
+  border-bottom: 1px solid var(--main__title__of__blocks);
+  border-left: 1px solid var(--main__title__of__blocks);
 }
 
 .header__theme-menu-button {
@@ -80,8 +74,8 @@
   border: none;
   font-family: var(--font__family);
   color: var(--button__color);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: var(--default__font__size);
+  font-weight: var(--default__font__weight);
   min-inline-size: 70px;
 }
 
@@ -91,14 +85,13 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: none;          /* Убираем стандартный outline */
+  outline: none; /* Убираем стандартный outline */
   border-color: transparent; /* Делаем все границы прозрачными */
   border-bottom: 1px solid var(--button__color); /* Добавляем только нижнюю границу */
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--button__color);
-  
 }
 
 .grid__container {
@@ -133,7 +126,6 @@
 
 .title-decor {
   background-color: var(--light__red);
-
   font-family: var(--font__family);
   font-weight: var(--header__font__weight);
   color: var(--dark__blue);
@@ -145,6 +137,7 @@
 .header__text {
   margin-bottom: 65px;
 }
+
 .main {
   padding: 40px 10px;
   display: grid;
@@ -179,7 +172,7 @@
 }
 
 .main__text__link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--main__paragraph);
 }
 
 .main__text__link:focus-visible {
@@ -204,14 +197,9 @@
 }
 
 .footer {
-
   display: grid;
   align-items: center;
   min-height: 100vh;
-}
-
-.footer__decorated-zone::before {
-  top: 10px;
 }
 
 .footer__title {
@@ -238,14 +226,11 @@
     bottom: 20px;
     left: 20px;
   }
-
   .header {
     padding-right: 20px;
     padding-left: 0;
-    min-block-size: 100vh;
   }
   .grid__container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 33vh min-content 33vh;
   }
@@ -276,7 +261,7 @@
     padding: 60px 20px;
     gap: 0;
   }
-  .one__theme__block {
+  .theme__block {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: min-content;
@@ -298,7 +283,7 @@
   }
   .reduce__concentration {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content repeat(3, min-content);
+    grid-auto-rows: min-content;
     gap: 20px;
   }
   .info__block {
@@ -315,6 +300,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+    grid-auto-rows: min-content;
   }
   .title-decor__tips:first-of-type {
     margin-top: 20px;
@@ -357,15 +343,17 @@
   .footer__title {
     font-size: var(--header__font__size-desktop);
   }
+  .why__is__so__hard {
+    min-block-size: 70px;
+  }
 }
 
 @media (width >= 1024px) {
-    .rec__container {
+  .rec__container {
     top: 20px;
     right: 25px;
   }
   .grid__container {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30vh 30vh min-content;
     gap: 10px;
@@ -379,15 +367,12 @@
     align-items: start;
   }
   .header__theme-menu-list {
-    display: flex;
-    gap: 10px;
     flex-direction: row;
   }
 
   .header__title {
     margin-top: 20px;
     align-self: center;
-    
   }
   .header__text {
     margin-top: 60px;
@@ -423,27 +408,16 @@
     grid-column: 2;
     grid-row: 2;
   }
-  .info__block {
-    display: grid;
-    grid-template-rows: repeat(2, min-content);
-  }
+
   .section__tips {
     margin-top: 0;
     padding-right: 20px;
   }
   .tips__paragraphs:last-child {
     margin-bottom: 0;
-  } 
+  }
   .images__block {
     padding-right: 20px;
     margin-top: 20px;
-  }
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
   }
 }
