@@ -3,6 +3,7 @@
   background-image: var(--cover__background__image);
   background-color: var(--main__background__color);
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -299,6 +300,11 @@
     gap: 20px;
   }
 
+  .cards__container {
+    grid-column: 1/4;
+    display: grid;
+    gap: 20px;
+  }
   .info__block {
     grid-column: 1/4;
   }
@@ -418,19 +424,32 @@
     grid-row: 1;
   }
 
+    .info__block {
+    grid-column: auto;
+  }
+
+  .cards__container {
+    grid-row: 2;
+    grid-column: 1/4;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+  }
+
   .multitasking {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
   }
 
   .gadjets {
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 1;
   }
 
   .food {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
   }
 
   .section__tips {
